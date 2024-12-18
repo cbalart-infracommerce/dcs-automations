@@ -65,6 +65,7 @@
     width: 280px;
     height: calc(100vh - 60px);
     overflow-y: hidden;
+    direction: rtl;
   }
   
   .menu h3 {
@@ -207,6 +208,7 @@
     overflow-y: scroll;
     padding-right: 10px;
     margin-right: -10px;
+    direction: ltr;
   }
   
   #flowButtons::-webkit-scrollbar {
@@ -245,21 +247,22 @@
     content: '▼';
     font-size: 12px;
     transition: transform 0.3s ease;
-  }
-  
-  .group-header.collapsed::after {
     transform: rotate(-90deg);
   }
   
+  .group-header.active::after {
+    transform: rotate(0deg);
+  }
+  
   .group-content {
-    max-height: 1000px;
+    max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-in-out;
     padding-left: 15px;
   }
   
-  .group-content.collapsed {
-    max-height: 0;
+  .group-content.active {
+    max-height: 1000px;
   }
   
   .group-content button {
