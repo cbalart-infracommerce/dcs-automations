@@ -90,7 +90,6 @@
     width: 280px;
     height: calc(100vh - 60px);
     overflow-y: hidden;
-    direction: rtl;
   }
   
   .menu h3 {
@@ -231,15 +230,19 @@
   #flowButtons {
     height: calc(100vh - 140px);
     overflow-y: scroll;
-    padding-right: 10px;
-    margin-right: -10px;
+    padding-left: 10px;
+    margin-left: -10px;
+    direction: rtl;
+  }
+  
+  #flowButtons > * {
     direction: ltr;
   }
   
   #flowButtons::-webkit-scrollbar {
     width: 4px;
     position: absolute;
-    right: 0;
+    left: 0;
   }
   
   #flowButtons::-webkit-scrollbar-track {
