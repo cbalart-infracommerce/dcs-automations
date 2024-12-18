@@ -64,6 +64,7 @@
   .logo-container h1 {
     font-size: 24px;
     margin: 0;
+    animation: titleBounce 3s ease-in-out infinite;
   }
   
   .user-email {
@@ -296,4 +297,13 @@
   .group-content button {
     font-size: 14px;
     padding: 12px 15px;
+  }
+  
+  @keyframes titleBounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
   }
