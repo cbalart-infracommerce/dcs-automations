@@ -29,7 +29,7 @@
   .logo-container {
     display: flex;
     align-items: center;
-    gap: 280px;
+    gap: 180px;
   }
   
   .logo {
@@ -115,6 +115,8 @@
   
   .menu::-webkit-scrollbar {
     width: 4px;
+    position: absolute;
+    right: 0;
   }
   
   .menu::-webkit-scrollbar-track {
@@ -201,6 +203,7 @@
   
   /* Contenedor de botones con scroll */
   #flowButtons {
+    position: relative;
     max-height: calc(100vh - 140px);
     overflow-y: auto;
   }
