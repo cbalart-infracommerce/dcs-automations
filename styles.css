@@ -29,11 +29,11 @@
   .logo-container {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 280px;
   }
   
   .logo {
-    height: 35px;
+    height: 45px;
   }
   
   .logo-container h1 {
@@ -63,6 +63,9 @@
     background-color: #D5D7D8;
     padding: 30px;
     width: 280px;
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
+    position: relative;
   }
   
   .menu h3 {
@@ -90,6 +93,15 @@
     margin-bottom: 20px;
   }
   
+  .menu button.home::after {
+    content: '';
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    border-bottom: 2px dashed #999;
+    margin-top: 40px;
+  }
+  
   .menu button:disabled {
     background-color: #9e9e9e;
     color: #e0e0e0;
@@ -99,6 +111,23 @@
   
   .menu button:not(:disabled):hover {
     transform: translateX(5px);
+  }
+  
+  .menu::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  .menu::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .menu::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 2px;
+  }
+  
+  .menu::-webkit-scrollbar-thumb:hover {
+    background: #555;
   }
   
   /* Contenido Principal */
@@ -168,4 +197,10 @@
   #sumResult {
     margin-top: 20px;
     font-size: 18px;
+  }
+  
+  /* Contenedor de botones con scroll */
+  #flowButtons {
+    max-height: calc(100vh - 140px);
+    overflow-y: auto;
   }
