@@ -227,3 +227,42 @@
   #flowButtons::-webkit-scrollbar-thumb:hover {
     background: #555;
   }
+  
+  /* Estilos para grupos de botones */
+  .flow-group {
+    margin-bottom: 15px;
+  }
+  
+  .group-header {
+    background-color: #5A4B7D !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10px !important;
+  }
+  
+  .group-header::after {
+    content: '▼';
+    font-size: 12px;
+    transition: transform 0.3s ease;
+  }
+  
+  .group-header.collapsed::after {
+    transform: rotate(-90deg);
+  }
+  
+  .group-content {
+    max-height: 1000px;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    padding-left: 15px;
+  }
+  
+  .group-content.collapsed {
+    max-height: 0;
+  }
+  
+  .group-content button {
+    font-size: 14px;
+    padding: 12px 15px;
+  }
