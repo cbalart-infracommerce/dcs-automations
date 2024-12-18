@@ -54,11 +54,11 @@
   .logo-container {
     display: flex;
     align-items: center;
-    gap: 180px;
+    gap: var(--spacing-lg);
   }
   
   .logo {
-    height: 45px;
+    height: calc(var(--header-height) - var(--spacing-xs));
   }
   
   .logo-container h1 {
