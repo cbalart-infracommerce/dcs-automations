@@ -63,9 +63,8 @@
     background-color: #D5D7D8;
     padding: 30px;
     width: 280px;
-    max-height: calc(100vh - 60px);
-    overflow-y: auto;
-    position: relative;
+    height: calc(100vh - 60px);
+    overflow-y: hidden;
   }
   
   .menu h3 {
@@ -90,16 +89,16 @@
   
   .menu button.home {
     background-color: #32CC7E;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
   }
   
   .menu button.home::after {
     content: '';
     position: absolute;
-    left: 30px;
-    right: 30px;
+    left: 20px;
+    right: 20px;
     border-bottom: 2px dashed #999;
-    margin-top: 40px;
+    margin-top: 25px;
   }
   
   .menu button:disabled {
@@ -203,7 +202,24 @@
   
   /* Contenedor de botones con scroll */
   #flowButtons {
-    position: relative;
-    max-height: calc(100vh - 140px);
+    height: calc(100vh - 140px);
     overflow-y: auto;
+    padding-right: 10px;
+  }
+  
+  #flowButtons::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  #flowButtons::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  #flowButtons::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 2px;
+  }
+  
+  #flowButtons::-webkit-scrollbar-thumb:hover {
+    background: #555;
   }
