@@ -1,6 +1,6 @@
-/* Variables CSS */
+/* 0. VARIABLES CSS */
 :root {
-  /* Colores */
+  /* COLORES */
   --primary-color: #3F3354;
   --secondary-color: #7A6CFF;
   --success-color: #32CC7E;
@@ -12,33 +12,33 @@
   --white: #FFFFFF;
   --text-primary: #333;
   --text-light: #CCC;
-  
-  /* Espaciado */
+
+  /* ESPACIADO */
   --spacing-xs: 8px;
   --spacing-sm: 15px;
   --spacing-md: 25px;
   --spacing-lg: 40px;
   
-  /* Dimensiones */
+  /* DIMENSIONES */
   --header-height: 60px;
   --menu-width: 280px;
   --logo-size: calc(var(--header-height) - var(--spacing-xs));
   
-  /* Bordes */
+  /* BORDES */
   --border-radius: 5px;
   --border-width: 1px;
   
-  /* Fuentes */
+  /* FUENTES */
   --font-size-sm: 14px;
   --font-size-md: 16px;
   --font-size-lg: 18px;
   --font-size-xl: 24px;
   
-  /* Animaciones */
+  /* ANIMACIONES */
   --transition-speed: 0.3s;
 }
 
-/* Estilos Generales */
+/* 1. ESTILOS GENERALES */
 * {
   margin: 0;
   padding: 0;
@@ -46,7 +46,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: Poppins, sans-serif;
   background-color: var(--gray-light);
   color: var(--text-primary);
   display: flex;
@@ -54,7 +54,7 @@ body {
   flex-direction: column;
 }
 
-/* Header */
+/* 2. HEADER */
 header {
   background-color: var(--primary-color);
   padding: var(--spacing-sm) var(--spacing-md);
@@ -90,7 +90,7 @@ header {
   color: var(--text-light);
 }
 
-/* Layout Principal */
+/* 3. LAYOUT PRINCIPAL */
 #appSection {
   display: flex;
   flex-direction: column;
@@ -102,7 +102,7 @@ header {
   flex: 1;
 }
 
-/* Menú */
+/* 4. MENÚ */
 .menu {
   background-color: var(--gray-medium);
   padding: var(--spacing-md);
@@ -117,7 +117,7 @@ header {
   text-align: left;
 }
 
-/* Contenedor de botones con scroll */
+/* 5. CONTENEDOR DE BOTONES CON SCROLL */
 #flowButtons {
   height: calc(100vh - calc(var(--header-height) + var(--spacing-lg) * 2));
   overflow-y: scroll;
@@ -130,7 +130,7 @@ header {
   direction: ltr;
 }
 
-/* Estilos de botones */
+/* 6. BOTONES */
 .menu button {
   background-color: var(--secondary-color);
   border: none;
@@ -177,7 +177,7 @@ header {
   transform: translateX(var(--spacing-xs));
 }
 
-/* Scrollbar */
+/* 7. SCROLLBAR */
 #flowButtons::-webkit-scrollbar {
   width: 4px;
   position: absolute;
@@ -197,7 +197,7 @@ header {
   background: var(--text-primary);
 }
 
-/* Grupos de botones */
+/* 8. GRUPOS DE BOTONES */
 .flow-group {
   margin-bottom: var(--spacing-sm);
 }
@@ -242,14 +242,14 @@ header {
   margin-left: var(--spacing-sm);
 }
 
-/* Contenido Principal */
+/* 9. CONTENIDO PRINCIPAL */
 .main-content {
   flex-grow: 1;
   padding: var(--spacing-lg);
   background-color: var(--white);
 }
 
-/* Loader */
+/* 10. LOADER */
 .loader {
   display: none;
   width: var(--spacing-md);
@@ -261,7 +261,7 @@ header {
   margin: var(--spacing-md) 0;
 }
 
-/* Animaciones */
+/* 11. ANIMACIONES */
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
@@ -272,9 +272,9 @@ header {
   50% { transform: translateX(-50%) translateY(-5px); }
 }
 
-/* Visibilidad de flujos */
+/* 12. VISIBILIDAD DE FLUJOS */
 .flow {
-  display: none;  /* Por defecto todos los flujos están ocultos */
+  display: none;  /* POR DEFECTO TODOS LOS FLUJOS ESTÁN OCULTOS */
 }
 
 .flow.hidden {
@@ -282,25 +282,32 @@ header {
 }
 
 .flow:not(.hidden) {
-  display: block;  /* Solo se muestra el flujo activo */
+  display: block;  /* SOLO SE MUESTRA EL FLUJO ACTIVO */
 }
 
-/* Estilos de la Calculadora */
-#sumFlow {
+/* 13. ESTÁNDAR DE FLUJOS */
+.flow {
   padding: var(--spacing-md);
 }
 
-#sumFlow h2 {
+.flow h2 {
   font-size: var(--font-size-xl);
   margin-bottom: var(--spacing-lg);
   color: var(--text-primary);
 }
 
+.flow p {
+  margin-bottom: var(--spacing-md);
+  line-height: 1.5;
+}
+
+/* 14. CALCULADORA */
 #sumFlow label {
   display: block;
   font-size: var(--font-size-md);
   color: var(--text-primary);
   margin-bottom: var(--spacing-xs);
+  margin-top: var(--spacing-md);
 }
 
 #sumFlow input[type="number"] {
@@ -334,8 +341,4 @@ header {
   margin-top: var(--spacing-md);
   font-size: var(--font-size-lg);
   color: var(--text-primary);
-}
-
-.loader {
-  margin: var(--spacing-md) 0;
 }
